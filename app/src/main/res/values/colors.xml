@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="android_white">#FAFAFA </color>
+    <color name="orange_pending">#fb8c00</color>
+    <color name="green_aproved">#4caf50</color>
+    <color name="red_rejectde">#e57373</color>
+    <color name="deep_red">#F60303</color>
+    <color name="blue_progress">#7F90CAF9</color>
+    <color name="deep_blue">#0336ff</color>"
+    <color name="faint_lime">#b2f522</color>
+</resources>

@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">JobTrek</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="company_name">Company Name</string>
+    <string name="job_title">Job Title</string>
+    <string name="job_type">Job Type</string>
+    <string name="jobType">Job Type</string>
+    <string name="delete">Delete</string>
+
+    <string-array name="job_type_options">
+        <item>Full-Time</item>
+        <item>Part-Time</item>
+        <item>Contract</item>
+        <item>Internship</item>
+        <item>Freelance</item>
+    </string-array>
+
+    <string-array name="application_status_options">
+        <item>Applied</item>
+        <item>Pending</item>
+        <item>Rejected</item>
+        <item>Accepted</item>
+    </string-array>
+
+</resources>

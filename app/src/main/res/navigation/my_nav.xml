@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/mainFragmentVw">
+
+    <fragment
+        android:id="@+id/retrievedJobDataFragment"
+        android:name="com.example.jobtracker.fragments.RetrievedJobDataFragment"
+        android:label="fragment_retrieved_job_data"
+        tools:layout="@layout/fragment_retrieved_job_data" >
+        <action
+            android:id="@+id/action_retrievedJobDataFragment_to_viewPagerFragment"
+            app:destination="@id/mainFragmentVw" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/jobFormFragment"
+        android:name="com.example.jobtracker.fragments.JobFormFragment"
+        android:label="fragment_job_form"
+        tools:layout="@layout/fragment_job_form" >
+        <action
+            android:id="@+id/action_jobFormFragment_to_viewPagerFragment"
+            app:destination="@id/mainFragmentVw"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragmentVw"
+        android:name="com.example.jobtracker.fragments.MainFragmentVw"
+        android:label="fragment_main_vw"
+        tools:layout="@layout/fragment_main_vw" >
+        <action
+            android:id="@+id/viewPagerFragment_to_jobFormFragment"
+            app:destination="@id/jobFormFragment" />
+        <action
+            android:id="@+id/viewPagerFragment_to_retrievedJobDataFragment"
+            app:destination="@id/retrievedJobDataFragment" />
+    </fragment>
+</navigation>

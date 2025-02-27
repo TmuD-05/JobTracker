@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".fragments.RetrievedJobDataFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Placeholder
+            android:layout_width="0dp"
+            android:layout_height="50dp"/>
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="47dp"
+            android:layout_marginEnd="62dp"
+            android:layout_marginTop="10dp"
+            android:layout_toStartOf="@+id/btn_update"
+            android:layout_toEndOf="@+id/btn_cancel"
+            android:text="Job Information"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btn_update"
+            android:layout_width="wrap_content"
+            android:layout_height="39dp"
+            android:layout_alignBottom="@+id/btn_cancel"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginBottom="-8dp"
+            android:backgroundTint="@color/white"
+            android:text="Update"
+            android:textStyle="bold"
+            android:textColor="@color/deep_blue"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="41dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/white"
+            android:text="Cancel"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="15sp" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Application Statuses"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="28dp"/>
+        <LinearLayout
+             android:layout_width="match_parent"
+            android:background="@drawable/round_grey_background_15"
+             android:layout_height="wrap_content"
+             android:layout_marginStart="20dp"
+             android:layout_marginEnd="20dp"
+             android:layout_marginTop="5dp"
+             android:orientation="vertical"
+             android:padding="16dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="115dp"
+                    android:layout_height="37dp"
+                    android:layout_centerVertical="true"
+                    android:text="Appilcation Status "
+                   />
+                <Spinner
+                    android:id="@+id/spinner_ApplicationStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center"
+                    android:entries="@array/application_status_options"
+                    android:hint="Application Status"
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="94dp"
+                    android:layout_height="39dp"
+                    android:layout_centerVertical="true"
+                    android:text="Date Applied" />
+                <Button
+                    android:id="@+id/btn_submission"
+                    android:layout_width="wrap_content"
+                    android:backgroundTint="@color/faint_lime"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="94dp"
+                    android:layout_height="39dp"
+                    android:layout_centerVertical="true"
+                    android:text="Date Of Reply"
+                    />
+                <Button
+                    android:id="@+id/btn_reply"
+                    android:layout_width="wrap_content"
+                    android:backgroundTint="@color/faint_lime"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center"
+                    />
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="28dp"
+                android:text="Job Information"
+              />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_grey_background_15"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/editText_CompanyName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:hint="@string/company_name"
+                    android:inputType="text">
+                </EditText>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <EditText
+                    android:id="@+id/editText_JobTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/job_title"
+                    android:inputType="text"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <EditText
+                    android:id="@+id/editText_Salary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Location"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="72dp"
+                    android:layout_height="30dp"
+                    android:text="@string/job_type"
+                    />
+                <Spinner
+                    android:id="@+id/spinner_JobType"
+                    android:layout_width="93dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:entries="@array/job_type_options"
+                    android:hint="@string/jobType" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/round_grey_background_15"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <TextView
+                android:id="@+id/btn_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/delete"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/deep_red"
+                android:backgroundTint="@color/white" />
+        </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+     </ScrollView>
+
+
+ </LinearLayout>
