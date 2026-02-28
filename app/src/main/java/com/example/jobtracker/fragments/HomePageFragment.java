@@ -177,48 +177,32 @@ Boolean isClicked;
         });
     }
 
-//    public void logOut()
-//    {
-//        new AlertDialog.Builder(getContext())
-//                .setTitle("Confirm Logout")
-//                .setMessage("Are you sure you want to log out?")
-//                .setPositiveButton("Logout", (dialog, which) -> {
-//
-//                    FirebaseAuth.getInstance().signOut();
-//                    Toast.makeText(getContext(), "Logged out successfully", Toast.LENGTH_SHORT).show();
-//
-//                    Intent intent = new Intent(getContext(), Sign_up.class);
-//                   // intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-//                    startActivity(intent);
-//                })
-//                .setNegativeButton("Cancel", null)
-//                .show();
-//    }
+
 public void logOut() {
     ValueEventListener valueEventListener = new ValueEventListener() {
         @Override
         public void onDataChange(@NonNull DataSnapshot snapshot) {
-            // Handle data when it changes
+           
         }
 
         @Override
         public void onCancelled(@NonNull DatabaseError error) {
-            // Handle any errors
+    
         }
     };
     new AlertDialog.Builder(getContext())
             .setTitle("Confirm Logout")
             .setMessage("Are you sure you want to log out?")
             .setPositiveButton("Logout", (dialog, which) -> {
-                // Remove the database listener
+                
                 if (databaseReference != null && valueEventListener != null) {
                     databaseReference.removeEventListener(valueEventListener);
                 }
-                // Sign out the user
+                
                 FirebaseAuth.getInstance().signOut();
                 Toast.makeText(getContext(), "Logged out successfully", Toast.LENGTH_SHORT).show();
 
-                // Redirect to the sign-up activity
+            
                 Intent intent = new Intent(getContext(), Sign_up.class);
                 startActivity(intent);
             })
