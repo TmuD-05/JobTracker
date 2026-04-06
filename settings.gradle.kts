@@ -18,5 +18,3 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "Job Tracker"
-include(":app")
